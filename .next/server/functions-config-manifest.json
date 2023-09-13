@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "functions": {
+    "/contact-us": {},
+    "/": {},
+    "/user": {},
+    "/webstories": {},
+    "/post/[id]": {},
+    "/login": {}
+  }
+}
