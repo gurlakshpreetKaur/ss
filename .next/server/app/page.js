@@ -276,7 +276,7 @@ module.exports = require("zlib");
 
 /***/ }),
 
-/***/ 53344:
+/***/ 2250:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -530,7 +530,7 @@ function Card({ title, text, datePosted, datePostedDisplay, likedBy, comments, v
 }
 function CardGalary({ cards }) {
     const [sortingAlgo, setSortingAlgo] = (0,react_.useState)(0);
-    const [colRange, setColRange] = (0,react_.useState)(window.innerWidth > 500 ? 290 : 200);
+    const [colRange, setColRange] = (0,react_.useState)( false ? 0 : 200);
     (0,react_.useEffect)(()=>{
         const update = ()=>setColRange(window.innerWidth > 500 ? 290 : 200);
         window.addEventListener("resize", update);
@@ -712,7 +712,7 @@ function HomeOut() {
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [587,851,610,225], () => (__webpack_exec__(53344)));
+var __webpack_exports__ = __webpack_require__.X(0, [587,851,610,225], () => (__webpack_exec__(2250)));
 module.exports = __webpack_exports__;
 
 })();

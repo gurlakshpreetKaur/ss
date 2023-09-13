@@ -47,6 +47,7 @@ function NavItem({ children, onClick = ()=>{} }) {
 }
 function NavBar() {
     function condition() {
+        if (true) return;
         if (window === undefined) return "black";
         if (window.location.pathname === "/") {
             if (document.documentElement.scrollTop < window.innerHeight - 30) return "transparent";
@@ -58,9 +59,6 @@ function NavBar() {
         }
         return "black";
     }
-    // const bg = "transparent";
-    console.log(window);
-    console.log('window.location.pathname === "/"', window.location.pathname === "/", window.location.pathname);
     let [bg, setBg] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(condition());
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{
         console.log("bg is", bg);

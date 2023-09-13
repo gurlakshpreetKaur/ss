@@ -276,7 +276,7 @@ module.exports = require("zlib");
 
 /***/ }),
 
-/***/ 47391:
+/***/ 69242:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -820,7 +820,7 @@ async function generateMetadata({ params: { id } }) {
 var __webpack_require__ = require("../../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [587,851,972,610,738], () => (__webpack_exec__(47391)));
+var __webpack_exports__ = __webpack_require__.X(0, [587,851,972,610,738], () => (__webpack_exec__(69242)));
 module.exports = __webpack_exports__;
 
 })();
