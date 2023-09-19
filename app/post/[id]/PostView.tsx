@@ -57,7 +57,7 @@ export function PostView({ id }: { id: string }) {
             <LikeButton docLikes={docLikes} setDocLikes={setDocLikes} id={id} />
         </div>
 
-        <div className="w-full h-[30vh] bg-cyan-500 bg-cover bg-fixed" style={{ backgroundImage: `url('${bgImage})` }}>
+        <div className="w-full h-[30vh] bg-cover bg-fixed" style={{ backgroundImage: `url('${bgImage}')` }}>
 
         </div>
 

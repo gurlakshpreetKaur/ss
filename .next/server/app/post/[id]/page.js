@@ -702,9 +702,9 @@ function PostView({ id }) {
                 ]
             }),
             /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                className: "w-full h-[30vh] bg-cyan-500 bg-cover bg-fixed",
+                className: "w-full h-[30vh] bg-cover bg-fixed",
                 style: {
-                    backgroundImage: `url('${bgImage})`
+                    backgroundImage: `url('${bgImage}')`
                 }
             }),
             /*#__PURE__*/ jsx_runtime_.jsx(CommentSecton, {
@@ -730,6 +730,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   "default": () => (/* binding */ PageOut),
   generateMetadata: () => (/* binding */ generateMetadata),
+  getStaticPaths: () => (/* binding */ getStaticPaths),
   metadata: () => (/* binding */ metadata)
 });
 
@@ -788,6 +789,18 @@ const db = (0,dist/* getFirestore */.ad)(app); // const analytics = getAnalytics
 
 
 
+const getStaticPaths = async ()=>{
+    const ids = await (0,dist/* getDocs */.PL)((0,dist/* collection */.hJ)(db, "posts"));
+    const paths = ids.docs.map((i)=>({
+            params: {
+                id: i.id
+            }
+        }));
+    return {
+        paths,
+        fallback: false
+    };
+};
 const metadata = {
     title: "CLA Article",
     description: "This is a sample metadata description which will be changed later :D"
@@ -820,7 +833,7 @@ async function generateMetadata({ params: { id } }) {
 var __webpack_require__ = require("../../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [587,851,972,610,738], () => (__webpack_exec__(69242)));
+var __webpack_exports__ = __webpack_require__.X(0, [587,851,972,336,937], () => (__webpack_exec__(69242)));
 module.exports = __webpack_exports__;
 
 })();

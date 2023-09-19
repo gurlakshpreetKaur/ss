@@ -11,16 +11,25 @@ function NavItem({ children, onClick = () => { } }: { children: JSX.Element, onC
 
 export function NavBar() {
     function condition() {
-        if (typeof window === "undefined") return;
+        let i = 0;
+        console.log(i++);
+        if (typeof window === "undefined") return "black";
+        console.log(i++);
         if (window === undefined) return "black";
+        console.log(i++);
         if (window.location.pathname === "/") {
+            console.log(i++);
             if ((document.documentElement.scrollTop) < (window.innerHeight - 30)) return "transparent";
+            console.log(i++);
             return "black";
         };
         if (window.location.pathname.includes("/post/")) {
+            console.log(i++);
             if ((document.documentElement.scrollTop) < window.innerHeight) return "black";
+            console.log(i++);
             return "black";
         };
+        console.log(i++);
         return "black";
     }
 
@@ -32,6 +41,7 @@ export function NavBar() {
 
     useEffect(() => {
         let onListen = (scroll: Event) => {
+            console.log(bg);
             if (!window) return;
             setBg(condition());
         }
